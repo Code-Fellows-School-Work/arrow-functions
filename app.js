@@ -107,28 +107,45 @@ const newObject = array => ({
 // Write your solutions on a single line wherever possible.
 
 
+// old way
+// let sum = function(a, b, c, d) {
+//   return a + b + c + d;
+// };
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+// new way
+let sum = (a, b, c, d) => a + b + c + d;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sum(1, 2, 3, 4));
 
+// old way
+// let objectLit = function() {
+//   return {
+//     key1: 'value1',
+//     key2: 'value2',
+//     key3: 'value3',
+//   };
+// };
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+// new way
+let objectLit = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(objectLit());
 
+// old way
+// let sumAndProduct = function(a, b) {
+//   let sum = a + b;
+//   let product = a * b;
+//   return [sum, product];
+// };
 
-let sumAndProduct = function(a, b) {
+// new way
+let sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
@@ -137,10 +154,13 @@ let sumAndProduct = function(a, b) {
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sumAndProduct(3, 9));
 
+// old way
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
 
-let message = function(name) {
-  return `Hello, ${name}!`;
-};
+// new way
+let message = (name) => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(message('Allie'));
@@ -190,17 +210,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
-// 1. What is "this" when joe.scope() is invoked?
-//
+// 1. What is "this" when joe.scope() is invoked? 
+// - Refers to the instance in the Student object
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//- In an arrow function, this refers to the global window object
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//- Arrow functions do not have their own "this" context but instead refers to the global window object therefore it is recommended to avoid using arrow functions for constructors
