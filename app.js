@@ -152,12 +152,15 @@ let sumAndProduct = (a, b) => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(sumAndProduct(3, 9));
+// console.log(sumAndProduct(3, 9));
 
+// old way
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
 
-let message = function(name) {
-  return `Hello, ${name}!`;
-};
+// new way
+let message = (name) => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(message('Allie'));
